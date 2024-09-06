@@ -11,14 +11,29 @@ header {
     color: white;
 }
 
-.centered-title {
+.title-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 3em;
-    color: white;
+    width: 100%;
+    text-align: center;
     z-index: 1; /* スライドショーの上に表示するため */
+}
+
+.main-title {
+    font-family: 'Kozuka Mincho Pro', serif; /* 楷書体風の書体を指定 */
+    font-size: 4em; /* 大きな文字サイズ */
+    margin: 0;
+    color: white;
+}
+
+.subtitle {
+    font-family: 'Kozuka Mincho Pro', serif; /* 楷書体風の書体を指定 */
+    font-size: 1.5em; /* 大きな文字サイズ */
+    color: white;
+    margin: 0;
+    font-style: italic; /* イタリック体にして装飾 */
 }
 
 .slideshow-container {
@@ -31,8 +46,9 @@ header {
     display: none;
 }
 
-.mySlides img {
+.slide-image {
     width: 100%;
+    height: auto;
 }
 
 .fade {
