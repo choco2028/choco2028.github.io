@@ -23,14 +23,14 @@ header {
 
 .main-title {
     font-family: 'Kozuka Mincho Pro', serif; /* 楷書体風の書体を指定 */
-    font-size: 6vw; /* 画面サイズに応じたサイズ */
+    font-size: 10vw; /* さらに大きなサイズ */
     margin: 0;
     color: white;
 }
 
 .subtitle {
     font-family: 'Kozuka Mincho Pro', serif; /* 楷書体風の書体を指定 */
-    font-size: 2.5vw; /* 画面サイズに応じたサイズ */
+    font-size: 4vw; /* さらに大きなサイズ */
     color: white;
     margin: 0;
     font-style: italic; /* イタリック体にして装飾 */
