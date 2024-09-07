@@ -76,8 +76,8 @@ section.form-link {
 }
 
 section.form-link img {
-    width: 50px; /* アイコンサイズを設定 */
-    height: 50px; /* アイコンサイズを設定 */
+    width: 100px; /* アイコンの幅を大きく設定 */
+    height: 100px; /* アイコンの高さも大きく設定 */
 }
 
 main {
