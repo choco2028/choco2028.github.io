@@ -80,6 +80,15 @@ section.form-link img {
     height: 100px; /* アイコンの高さも大きく設定 */
 }
 
+.form-text {
+    font-family: 'Kozuka Mincho Pro', serif; /* 楷書体風のフォント */
+    font-size: 3vw; /* 画面サイズに合わせた大きなフォント */
+    color: #333; /* テキストの色 */
+    font-weight: bold; /* 太字で強調 */
+    margin-bottom: 10px; /* テキストとアイコンの間に余白 */
+    line-height: 1.5; /* 行間を少し広げて見やすく */
+}
+
 main {
     padding: 20px;
     text-align: center;
