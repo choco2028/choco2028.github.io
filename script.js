@@ -13,3 +13,32 @@ function showSlides() {
     slides[slideIndex - 1].style.display = "block";
     setTimeout(showSlides, 3000); // 3秒ごとにスライドを切り替え
 }
+
+/* サイドバーを開く関数 */
+function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+}
+
+/* サイドバーを閉じる関数 */
+function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+}
+
+let sidebarOpen = false;
+
+function toggleNav() {
+    if (sidebarOpen) {
+        closeNav();
+    } else {
+        openNav();
+    }
+    sidebarOpen = !sidebarOpen;
+}
+
+function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+}

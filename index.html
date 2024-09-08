@@ -7,15 +7,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- サイドバーメニューを開くボタン -->
+    <button class="openbtn" onclick="toggleNav()">☰ メニュー</button>
+
+    <!-- サイドバーを追加（右側に表示） -->
+    <nav id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="characters.html">神々の物語</a></li>
+        </ul>
+    </nav>
+
+    <!-- 残りのページ内容はそのまま -->
     <header>
         <div class="slideshow-container">
-            <!-- タイトルとサブタイトルをスライドショーの上に配置 -->
             <div class="title-container">
                 <h1 class="main-title">四季遊宴</h1>
                 <h2 class="subtitle">~暇を持て余した神々の宴~</h2>
             </div>
-            
-            <!-- スライドショー部分 -->
+
             <div class="mySlides fade">
                 <img src="img/spring.jpg" alt="春の神" class="slide-image">
             </div>
@@ -33,7 +45,7 @@
 
     <!-- Googleフォームアイコンリンクをヘッダーとメインの間に追加 -->
     <section class="form-link">
-	<p class="form-text">キャラ人気投票フォーム！<br>ぜひ投票してください！！</p>
+        <p class="form-text">キャラ人気投票フォーム！<br>ぜひ投票してください！！</p>
         <a href="https://forms.google.com" target="_blank">
             <img src="img/google-form-icon.png" alt="Google Form">
         </a>

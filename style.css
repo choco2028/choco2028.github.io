@@ -161,3 +161,53 @@ footer {
         font-size: 4vw; /* スマホ用の説明文のフォントサイズ */
     }
 }
+/* サイドバーのスタイル */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0; /* サイドバーを右側に配置 */
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 2; /* サイドバーを最前面に表示 */
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* メニューを開くボタンのスタイル */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position: fixed;
+    top: 10px;
+    right: 10px; /* ボタンも右側に配置 */
+    z-index: 3; /* ボタンを他の要素より前面に表示 */
+}
+
+/* スライドショーや他の要素のスタイルはそのまま */

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>神々の物語</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="main-title">神々の物語</h1>
+        <!-- サイドバーメニューを開くボタン -->
+    <button class="openbtn" onclick="toggleNav()">☰ メニュー</button>
+
+    <!-- サイドバーを追加（右側に表示） -->
+    <nav id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="characters.html">神々の物語</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main>
+        <section class="story">
+            <h2>春の神の物語</h2>
+            <p>春の神は...（ストーリーの内容）</p>
+        </section>
+
+        <section class="story">
+            <h2>夏の神の物語</h2>
+            <p>夏の神は...（ストーリーの内容）</p>
+        </section>
+
+        <!-- 他の神々のストーリーも追加 -->
+    </main>
+
+    <footer>
+        <p>© 2024 神々の世界</p>
+    </footer>
+</body>
+</html>
