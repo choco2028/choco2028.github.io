@@ -3,41 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>神々の物語</title>
+    <title>キャラクター紹介 - 四季遊宴</title>
+    <!-- CSSファイルのリンク -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <h1 class="main-title">神々の物語</h1>
-        <!-- サイドバーメニューを開くボタン -->
-    <button class="openbtn" onclick="toggleNav()">☰ メニュー</button>
+<body id="character">
+    <!-- サイドバーを開くボタン -->
+    <button class="openbtn" onclick="openNav()">☰ メニュー</button>
 
-    <!-- サイドバーを追加（右側に表示） -->
-    <nav id="mySidebar" class="sidebar">
+    <!-- サイドバー -->
+    <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <ul>
             <li><a href="index.html">ホーム</a></li>
-            <li><a href="characters.html">神々の物語</a></li>
+            <li><a href="character.html">神々の物語</a></li>
+            <!-- 他のナビゲーションリンクをここに追加 -->
         </ul>
-    </nav>
-    </header>
+    </div>
 
+    <!-- メインコンテンツ -->
     <main>
-        <section class="story">
-            <h2>春の神の物語</h2>
-            <p>春の神は...（ストーリーの内容）</p>
+        <section>
+            <h1>神々の物語</h1>
+            <p>ここでは、四季の神々に関する物語を紹介します。</p>
         </section>
-
-        <section class="story">
-            <h2>夏の神の物語</h2>
-            <p>夏の神は...（ストーリーの内容）</p>
-        </section>
-
-        <!-- 他の神々のストーリーも追加 -->
     </main>
 
+    <!-- フッター -->
     <footer>
-        <p>© 2024 神々の世界</p>
+        <div class="social-icons">
+            <a href="https://www.youtube.com/channel/UCm8RX-yrkuSGb4ieMPTFo6A" target="_blank">
+                <img src="img/youtube-icon.png" alt="YouTube">
+            </a>
+            <a href="https://x.com/shikikami_2025?s=21&t=Aer5eXhxm0308F5ElfURAw" target="_blank">
+                <img src="img/twitter-icon.png" alt="Twitter">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="img/instagram-icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.tiktok.com/@shikirnqujp" target="_blank">
+                <img src="img/tiktok-icon.png" alt="TikTok">
+            </a>
+            <a href="https://forms.google.com" target="_blank">
+                <img src="img/google-form-icon.png" alt="Google Form">
+            </a>
+        </div>
     </footer>
+
+    <!-- サイドバーの開閉スクリプト -->
+    <script src="script.js"></script>
 </body>
 </html>

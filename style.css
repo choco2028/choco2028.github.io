@@ -1,8 +1,8 @@
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #f0f0f0 !important;
 }
 
 header {
@@ -209,5 +209,17 @@ footer {
     right: 10px; /* ボタンも右側に配置 */
     z-index: 3; /* ボタンを他の要素より前面に表示 */
 }
+
+/* スマホ用のレスポンシブスタイル */
+@media (max-width: 768px) {
+    .openbtn {
+        font-size: 16px;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
+}
+
 
 /* スライドショーや他の要素のスタイルはそのまま */
