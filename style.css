@@ -9,7 +9,7 @@ header {
     position: relative;
     text-align: center;
     color: white;
-    margin-bottom: 0; /* ヘッダーとボディの隙間をなくす */
+    margin-bottom: 0;
 }
 
 .title-container {
@@ -19,43 +19,20 @@ header {
     transform: translate(-50%, -50%);
     width: 100%;
     text-align: center;
-    z-index: 1; /* スライドショーの上に表示 */
-    padding: 0; /* パディングによる隙間をなくす */
-}
-
-.main-title {
-    font-family: 'Kozuka Mincho Pro', serif; /* 楷書体風の書体 */
-    font-size: 10vw; /* 画面サイズに合わせた大きなフォント */
-    margin: 0;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明の背景 */
-    padding: 10px; /* タイトルの余白 */
-    display: block;
+    z-index: 1;
 }
 
 .main-title-image {
-    max-width: 100%; /* 画面幅に合わせて縮小 */
-    height: auto; /* 縦横比を維持 */
+    max-width: 100%;
+    height: auto;
     display: block;
-    margin: 0 auto; /* 中央揃え */
+    margin: 0 auto;
 }
 
-.subtitle {
-    font-family: 'Kozuka Mincho Pro', serif; /* 楷書体風の書体 */
-    font-size: 4vw; /* 画面サイズに合わせたフォント */
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明の背景 */
-    padding: 5px;
-    display: block;
-    margin-top: 10px; /* タイトルとの間に余白 */
-    font-style: italic;
-}
-
-/* スライドショーのスタイル */
 .slideshow-container {
     position: relative;
     width: 100%;
-    height: 50vh; /* 高さを画面サイズに応じて可変に */
+    height: 50vh;
     margin: auto;
     overflow: hidden;
 }
@@ -66,8 +43,8 @@ header {
 
 .slide-image {
     width: 100%;
-    height: 100%; /* スライドの高さをコンテナいっぱいに */
-    object-fit: cover; /* コンテナをカバーするように調整 */
+    height: 100%;
+    object-fit: cover;
 }
 
 .fade {
@@ -80,50 +57,63 @@ header {
     to { opacity: 1; }
 }
 
-/* Googleフォームリンクのスタイル */
-section.form-link {
+.form-link {
     text-align: center;
     margin: 20px 0;
 }
 
-section.form-link img {
-    width: 100px; /* アイコンサイズを大きく設定 */
+.form-link img {
+    width: 100px;
     height: 100px;
 }
 
 .form-text {
-    font-family: 'Kozuka Mincho Pro', serif; /* 楷書体風の書体 */
-    font-size: 3vw; /* 説明文のフォントサイズ */
-    color: #333; /* テキストの色 */
-    font-weight: bold; /* 太字 */
-    margin-bottom: 10px; /* テキストとアイコンの間に余白 */
-    line-height: 1.5; /* 行間を広く */
+    font-family: 'Kozuka Mincho Pro', serif;
+    font-size: 3vw;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 1.5;
 }
 
-/* メインセクションのスタイル */
 main {
     padding: 20px;
     text-align: center;
-    margin: 0; /* メインの上部の隙間をなくす */
 }
 
 .gods {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 
 .god {
-    width: 200px;
-    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 20px;
 }
 
 .god img {
-    width: 100%;
+    width: 48%;
     height: auto;
+    object-fit: cover;
 }
 
-/* フッターのスタイル */
+.god-description {
+    width: 48%;
+    text-align: left;
+}
+
+.god.left {
+    flex-direction: row;
+}
+
+.god.right {
+    flex-direction: row-reverse;
+}
+
 footer {
     background-color: #333;
     color: white;
@@ -145,88 +135,33 @@ footer {
     height: 30px;
 }
 
-/* スマホ用のレスポンシブスタイル */
+/* スマホ用のレスポンシブ対応（幅768px以下） */
 @media (max-width: 768px) {
-    .main-title {
-        font-size: 12vw; /* スマホ画面でさらに大きく */
+    .god {
+        width: 100%;
+        justify-content: center;
     }
 
-    .subtitle {
-        font-size: 6vw; /* スマホ向けサブタイトル調整 */
+    .god.left img {
+        order: 1;
+        margin-right: 10px;
     }
 
-    .slideshow-container {
-        height: 40vh; /* スマホ向けスライドショーの高さ調整 */
+    .god.right img {
+        order: 2;
+        margin-left: 10px;
     }
 
-    .form-link img {
-        width: 80px; /* スマホではアイコンを少し小さく */
-        height: 80px;
+    .god img {
+        width: 40%;
     }
 
-    .form-text {
-        font-size: 4vw; /* スマホ用の説明文のフォントサイズ */
-    }
-}
-/* サイドバーのスタイル */
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    right: 0; /* サイドバーを右側に配置 */
-    background-color: #333;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    z-index: 2; /* サイドバーを最前面に表示 */
-}
-
-.sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidebar a:hover {
-    color: #f1f1f1;
-}
-
-.sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-/* メニューを開くボタンのスタイル */
-.openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #111;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    position: fixed;
-    top: 10px;
-    right: 10px; /* ボタンも右側に配置 */
-    z-index: 3; /* ボタンを他の要素より前面に表示 */
-}
-
-/* スマホ用のレスポンシブスタイル */
-@media (max-width: 768px) {
-    .openbtn {
-        font-size: 16px;
+    .god-description {
+        width: 50%;
+        text-align: left;
     }
 
-    .sidebar a {
-        font-size: 18px;
+    .main-title-image {
+        max-width: 80%;
     }
 }
-
-
-/* スライドショーや他の要素のスタイルはそのまま */
