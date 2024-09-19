@@ -15,12 +15,12 @@ function showSlides() {
     setTimeout(showSlides, 3000); // 3秒ごとにスライドを切り替え
 }
 
-// サイドバーを開く関数
+/* サイドバーを開く */
 function openNav() {
     document.getElementById("mySidebar").style.width = "250px";
 }
 
-// サイドバーを閉じる関数
+/* サイドバーを閉じる */
 function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
 }

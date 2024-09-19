@@ -1,3 +1,58 @@
+/* サイドバーのスタイル */
+.sidebar {
+    height: 100%; /* Full height */
+    width: 0; /* 初期状態は幅0 */
+    position: fixed; /* 固定表示 */
+    z-index: 1; /* 最前面 */
+    top: 0;
+    right: 0; /* 右側に表示 */
+    background-color: #111; /* 背景色 */
+    overflow-x: hidden; /* 横スクロールバーを非表示 */
+    transition: 0.5s; /* 開閉のアニメーション */
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* 「三」ボタン（openbtn）を右下に固定 */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    position: fixed; /* スクロールに追従 */
+    right: 20px; /* 右端からの距離 */
+    bottom: 20px; /* 下端からの距離 */
+    z-index: 2; /* サイドバーよりも前面に表示 */
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+
 body {
     font-family: 'Arial', sans-serif !important;
     margin: 0 !important;
@@ -96,13 +151,13 @@ main {
 }
 
 .god img {
-    width: 48%;
+    width: 30%;
     height: auto;
     object-fit: cover;
 }
 
 .god-description {
-    width: 48%;
+    width: 30%;
     text-align: left;
 }
 
@@ -153,11 +208,11 @@ footer {
     }
 
     .god img {
-        width: 40%;
+        width: 30%;
     }
 
     .god-description {
-        width: 50%;
+        width: 30%;
         text-align: left;
     }
 
