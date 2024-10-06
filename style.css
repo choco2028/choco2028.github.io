@@ -162,11 +162,17 @@ main {
 }
 
 .god.left {
-    flex-direction: row;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.god.left img:nth-child(2) {
+    margin-top: 10px; /* sakura.pngの下に余白を追加 */
 }
 
 .god.right {
-    flex-direction: row-reverse;
+    flex-direction: column-reverse;
+    align-items: flex-end;
 }
 
 footer {
@@ -195,6 +201,8 @@ footer {
     .god {
         width: 100%;
         justify-content: center;
+        flex-direction: column; /* スマホ用に縦に並べる */
+        align-items: center;
     }
 
     .god.left img {
@@ -208,12 +216,12 @@ footer {
     }
 
     .god img {
-        width: 30%;
+        width: 50%; /* スマホでの画像の幅を調整 */
     }
 
     .god-description {
-        width: 30%;
-        text-align: left;
+        width: 80%;
+        text-align: center;
     }
 
     .main-title-image {
