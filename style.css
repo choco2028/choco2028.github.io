@@ -1,4 +1,12 @@
-/* サイドバーのスタイル */
+/* CSSスタイル */
+
+body {
+    font-family: 'Arial', sans-serif !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #f0f0f0 !important;
+}
+
 .sidebar {
     height: 100%; /* Full height */
     width: 0; /* 初期状態は幅0 */
@@ -50,14 +58,6 @@
 
 .openbtn:hover {
     background-color: #444;
-}
-
-
-body {
-    font-family: 'Arial', sans-serif !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background-color: #f0f0f0 !important;
 }
 
 header {
@@ -142,44 +142,50 @@ main {
     align-items: center;
 }
 
+.god-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%; /* 最大幅に設定 */
+}
+
 .god {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
-    margin-bottom: 20px;
-}
-
-.god img {
-    width: 30%;
-    height: auto;
-    object-fit: cover;
-}
-
-.god-description {
-    width: 30%;
-    text-align: left;
-}
-
-.god.left {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    width: 30%; /* 幅を30%に設定 */
+    margin: 0 10px; /* 左右の余白を10px */
 }
 
-.god.left img:nth-child(2) {
-    margin-top: 10px; /* sakura.pngの下に余白を追加 */
+.spring-god, .summer-god, .autumn-god, .winter-god, .sakura {
+    width: 100%; /* 画像を100%の幅に設定 */
+    max-width: 200px; /* PCサイズでの最大幅 */
 }
 
-.god.right {
-    flex-direction: column-reverse;
-    align-items: flex-end;
+.youtube-container {
+    width: 100%;
+    max-width: 200px; /* YouTube動画の最大幅 */
+    margin: 10px 0; /* 上下のマージンを10px */
+}
+
+.youtube-container iframe {
+    width: 100%; /* 幅を100%に設定 */
+    height: 300px; /* 縦幅は300pxに設定 */
+}
+
+@media (max-width: 768px) {
+    .spring-god, .summer-god, .autumn-god, .winter-god, .sakura {
+        max-width: 150px; /* スマホサイズでの最大幅 */
+    }
+
+    .youtube-container iframe {
+        height: 200px; /* スマホサイズでの高さを200pxに設定 */
+    }
 }
 
 footer {
     background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
+    padding: 10px 0;
 }
 
 .social-icons {
@@ -194,37 +200,4 @@ footer {
 .social-icons img {
     width: 30px;
     height: 30px;
-}
-
-/* スマホ用のレスポンシブ対応（幅768px以下） */
-@media (max-width: 768px) {
-    .god {
-        width: 100%;
-        justify-content: center;
-        flex-direction: column; /* スマホ用に縦に並べる */
-        align-items: center;
-    }
-
-    .god.left img {
-        order: 1;
-        margin-right: 10px;
-    }
-
-    .god.right img {
-        order: 2;
-        margin-left: 10px;
-    }
-
-    .god img {
-        width: 50%; /* スマホでの画像の幅を調整 */
-    }
-
-    .god-description {
-        width: 80%;
-        text-align: center;
-    }
-
-    .main-title-image {
-        max-width: 80%;
-    }
 }
